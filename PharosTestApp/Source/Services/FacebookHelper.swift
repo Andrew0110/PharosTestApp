@@ -22,4 +22,8 @@ class FacebookHelper {
             }
         }
     }
+    
+    func clearAllData() {
+        datastore.clearAllData()
+    }
 }

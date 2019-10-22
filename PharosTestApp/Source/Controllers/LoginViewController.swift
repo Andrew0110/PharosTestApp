@@ -11,25 +11,25 @@ import UIKit
 class LoginViewController: BaseViewController {
     
     var onLogInSuccess: (()->Void)?
-    private let loginButton = UIButton()
+    private let loginView = SingleButtonView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .white
-        
-        view.addSubview(loginButton)
-        loginButton.anchor(top: nil, leading: nil, bottom: nil, trailing: nil, padding: .zero, size: .init(width: 0, height: 40))
-        loginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        loginButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        loginButton.setTitleColor(.blue, for: .normal)
-        
-        loginButton.setTitle("Login with Facebook", for: .normal)
-        loginButton.addTarget(self, action: #selector(loginFacebookAction), for: .touchUpInside)
-        
         title = "Login"
+        
+        setupViews()
     }
 
+    private func setupViews() {
+        view.backgroundColor = .white
+        view.addSubview(loginView)
+        loginView.fillSuperview()
+        
+        loginView.action = Action(title: "Login with Facebook", iconName: nil, action: { [weak self] in
+            self?.loginFacebookAction()
+        })
+    }
+    
     @objc private func loginFacebookAction() {
         FacebookAuthManager.instance.login(in: self, onSuccess: { [weak self] in
             self?.onLogInSuccess?()

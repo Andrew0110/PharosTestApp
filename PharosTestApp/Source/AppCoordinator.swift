@@ -25,7 +25,7 @@ class AppCoordinator {
         NotificationCenter.default.removeObserver(self)
     }
     
-    @objc func start() {
+    func start() {
         if FacebookAuthManager.instance.isAuthorized() {
             showProfilePage()
         } else {
@@ -37,7 +37,13 @@ class AppCoordinator {
 private extension AppCoordinator {
     // MARK: - Configuration
     func configureNotifications() {
-        NotificationCenter.default.addObserver(self, selector: #selector(start), name: Notification.Name.init(Constants.Notifications.UserLogedOut), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onDidLogout), name: Notification.Name.init(Constants.Notifications.UserLogedOut), object: nil)
+    }
+    
+    // MARK: - Navigation Actions
+    @objc func onDidLogout() {
+        faceBookHelper.clearAllData()
+        start()
     }
     
     // MARK: - Navigation Actions

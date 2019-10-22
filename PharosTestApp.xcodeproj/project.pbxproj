@@ -13,6 +13,9 @@
 		497397F8235EFAE900A8FA10 /* DispatchQueueHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497397F7235EFAE900A8FA10 /* DispatchQueueHelper.swift */; };
 		497397FF235F059400A8FA10 /* Profile+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497397FD235F059400A8FA10 /* Profile+CoreDataClass.swift */; };
 		49739800235F059400A8FA10 /* Profile+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497397FE235F059400A8FA10 /* Profile+CoreDataProperties.swift */; };
+		49739802235F66C200A8FA10 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49739801235F66C200A8FA10 /* ProfileView.swift */; };
+		49739804235F66D300A8FA10 /* SingleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49739803235F66D300A8FA10 /* SingleButtonView.swift */; };
+		49739806235F67D400A8FA10 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49739805235F67D400A8FA10 /* BaseView.swift */; };
 		49944C262359B1BA0011B6A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49944C252359B1BA0011B6A4 /* AppDelegate.swift */; };
 		49944C2A2359B1BA0011B6A4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49944C292359B1BA0011B6A4 /* LoginViewController.swift */; };
 		49944C2F2359B1BC0011B6A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49944C2E2359B1BC0011B6A4 /* Assets.xcassets */; };
@@ -42,6 +45,9 @@
 		497397F7235EFAE900A8FA10 /* DispatchQueueHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueHelper.swift; sourceTree = "<group>"; };
 		497397FD235F059400A8FA10 /* Profile+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataClass.swift"; sourceTree = "<group>"; };
 		497397FE235F059400A8FA10 /* Profile+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		49739801235F66C200A8FA10 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		49739803235F66D300A8FA10 /* SingleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleButtonView.swift; sourceTree = "<group>"; };
+		49739805235F67D400A8FA10 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		49944C222359B1BA0011B6A4 /* PharosTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PharosTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49944C252359B1BA0011B6A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49944C292359B1BA0011B6A4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +176,8 @@
 		4994E6D8235D92E10098E4EB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				49739801235F66C200A8FA10 /* ProfileView.swift */,
+				49739803235F66D300A8FA10 /* SingleButtonView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -210,6 +218,7 @@
 				4994E6F7235EC9AB0098E4EB /* HUDView.swift */,
 				4994E6E8235E149D0098E4EB /* LoadingImageView.swift */,
 				4994E6E4235E13950098E4EB /* ActionButton.swift */,
+				49739805235F67D400A8FA10 /* BaseView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -359,11 +368,14 @@
 				4994E6EC235E32280098E4EB /* CoreDataStack.swift in Sources */,
 				4994E6E0235DC8000098E4EB /* FacebookAuthManager.swift in Sources */,
 				49944C262359B1BA0011B6A4 /* AppDelegate.swift in Sources */,
+				49739806235F67D400A8FA10 /* BaseView.swift in Sources */,
 				497397F2235EE57600A8FA10 /* FacebookProfileDatastore.swift in Sources */,
 				4994E6E7235E13B60098E4EB /* Action.swift in Sources */,
+				49739804235F66D300A8FA10 /* SingleButtonView.swift in Sources */,
 				4994E6E5235E13960098E4EB /* ActionButton.swift in Sources */,
 				4994E6FA235ECB2B0098E4EB /* String+Ext.swift in Sources */,
 				49739800235F059400A8FA10 /* Profile+CoreDataProperties.swift in Sources */,
+				49739802235F66C200A8FA10 /* ProfileView.swift in Sources */,
 				4994E6F2235EB5610098E4EB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

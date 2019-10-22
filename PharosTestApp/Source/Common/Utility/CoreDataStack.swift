@@ -12,21 +12,21 @@ class CoreDataStack {
     
     private let modelName: String
     
-//    init(modelName: String) {
-//        self.modelName = modelName
-//    }
-//
     init(modelName: String) {
         self.modelName = modelName
-        let persistentStoreDescription = NSPersistentStoreDescription()
-//        persistentStoreDescription.type = NSInMemoryStoreType
-        persistentStoreDescription.type = NSSQLiteStoreType
-        let container = NSPersistentContainer(name: modelName)
-        container.persistentStoreDescriptions = [persistentStoreDescription]
-        container.loadPersistentStores { (storeDescription, error) in
-        }
-        self.storeContainer = container
     }
+//
+//    init(modelName: String) {
+//        self.modelName = modelName
+//        let persistentStoreDescription = NSPersistentStoreDescription()
+////        persistentStoreDescription.type = NSInMemoryStoreType
+//        persistentStoreDescription.type = NSSQLiteStoreType
+//        let container = NSPersistentContainer(name: modelName)
+//        container.persistentStoreDescriptions = [persistentStoreDescription]
+//        container.loadPersistentStores { (storeDescription, error) in
+//        }
+//        self.storeContainer = container
+//    }
     
     lazy var storeContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: self.modelName)

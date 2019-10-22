@@ -35,7 +35,8 @@ class FacebookProfileDatastore {
             profile.lastName = profileInfo.last_name
             profile.photoURL = profileInfo.imageURL
             profile.firstName = profileInfo.first_name
-            
+            profile.id = profileInfo.id
+
             stack.saveContext()
             completion(profile)
         }

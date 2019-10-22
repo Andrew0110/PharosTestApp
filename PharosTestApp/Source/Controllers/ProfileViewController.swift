@@ -10,6 +10,7 @@ import UIKit
 
 class ProfileViewController: BaseViewController {
     
+    private let profileView = ProfileView()
     var profile: Profile? {
         didSet {
             configureView()
@@ -20,14 +21,19 @@ class ProfileViewController: BaseViewController {
         super.viewDidLoad()
         title = "Profile"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain,  target: self, action: #selector(logoutTapped))
+        
+        setupViews()
+    }
 
-        if profile != nil {
-            configureView()
-        }
+    private func setupViews() {
+        view.addSubview(profileView)
+        profileView.fillSuperview()
     }
     
     func configureView() {
-        
+        if let profile = profile {
+            profileView.configure(profile: profile)
+        }
     }
     
     // MARK: - Actions
