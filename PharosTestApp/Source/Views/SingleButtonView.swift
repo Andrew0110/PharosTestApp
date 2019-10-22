@@ -8,6 +8,9 @@
 
 import UIKit
 
+private let inset: CGFloat = 20
+private let height: CGFloat = 40
+
 class SingleButtonView: BaseView {
     
     private let button = ActionButton()
@@ -19,7 +22,7 @@ class SingleButtonView: BaseView {
     
     override func setupSubviews() {
         addSubview(button)
-        button.anchor(top: nil, leading: nil, bottom: nil, trailing: nil, padding: .zero, size: .init(width: 0, height: 40))
+        button.anchor(top: nil, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 0, left: inset, bottom: 0, right: inset), size: .init(width: 0, height: height))
         button.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         button.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         

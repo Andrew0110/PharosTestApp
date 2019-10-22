@@ -19,13 +19,14 @@ class ProfileViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Profile"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain,  target: self, action: #selector(logoutTapped))
+        title = Constants.Titles.Profile
         
         setupViews()
     }
 
     private func setupViews() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: Constants.ButtonTitles.Logout, style: .plain,  target: self, action: #selector(logoutTapped))
+        
         view.addSubview(profileView)
         profileView.fillSuperview()
     }

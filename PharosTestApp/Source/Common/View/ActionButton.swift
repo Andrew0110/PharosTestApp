@@ -67,7 +67,7 @@ class ActionButton: UIButton {
         setTitleColor(textColor, for: .normal)
         imageView?.tintColor = textColor
         tintColor = textColor
-        titleLabel?.font = UIFont.systemFont(ofSize: 16)
+        titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         backgroundColor = secondaryColor
         contentHorizontalAlignment = .center
         

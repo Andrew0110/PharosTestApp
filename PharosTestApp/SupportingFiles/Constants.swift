@@ -12,4 +12,12 @@ struct Constants {
     struct Notifications {
         static let UserLogedOut = "kUserLogedOut"
     }
+    struct Titles {
+        static let Profile = "Profile"
+        static let Login = "Login"
+    }
+    struct ButtonTitles {
+        static let Logout = "Logout"
+        static let FBLogin = "Login with Facebook"
+    }
 }

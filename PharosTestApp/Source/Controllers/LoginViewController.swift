@@ -15,7 +15,7 @@ class LoginViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Login"
+        title = Constants.Titles.Login
         
         setupViews()
     }
@@ -25,7 +25,7 @@ class LoginViewController: BaseViewController {
         view.addSubview(loginView)
         loginView.fillSuperview()
         
-        loginView.action = Action(title: "Login with Facebook", iconName: nil, action: { [weak self] in
+        loginView.action = Action(title: Constants.ButtonTitles.FBLogin, iconName: nil, action: { [weak self] in
             self?.loginFacebookAction()
         })
     }
