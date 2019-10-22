@@ -1,0 +1,578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		497397F2235EE57600A8FA10 /* FacebookProfileDatastore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497397F1235EE57600A8FA10 /* FacebookProfileDatastore.swift */; };
+		497397F4235EEB8400A8FA10 /* FBProfileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497397F3235EEB8400A8FA10 /* FBProfileInfo.swift */; };
+		497397F6235EF2C000A8FA10 /* FacebookHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497397F5235EF2C000A8FA10 /* FacebookHelper.swift */; };
+		497397F8235EFAE900A8FA10 /* DispatchQueueHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497397F7235EFAE900A8FA10 /* DispatchQueueHelper.swift */; };
+		497397FF235F059400A8FA10 /* Profile+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497397FD235F059400A8FA10 /* Profile+CoreDataClass.swift */; };
+		49739800235F059400A8FA10 /* Profile+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497397FE235F059400A8FA10 /* Profile+CoreDataProperties.swift */; };
+		49944C262359B1BA0011B6A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49944C252359B1BA0011B6A4 /* AppDelegate.swift */; };
+		49944C2A2359B1BA0011B6A4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49944C292359B1BA0011B6A4 /* LoginViewController.swift */; };
+		49944C2F2359B1BC0011B6A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49944C2E2359B1BC0011B6A4 /* Assets.xcassets */; };
+		49944C322359B1BC0011B6A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49944C302359B1BC0011B6A4 /* LaunchScreen.storyboard */; };
+		4994E6DC235DA9BC0098E4EB /* UIView+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994E6DB235DA9BC0098E4EB /* UIView+Anchors.swift */; };
+		4994E6DE235DC08A0098E4EB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994E6DD235DC08A0098E4EB /* ProfileViewController.swift */; };
+		4994E6E0235DC8000098E4EB /* FacebookAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994E6DF235DC8000098E4EB /* FacebookAuthManager.swift */; };
+		4994E6E2235DF5350098E4EB /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994E6E1235DF5350098E4EB /* AppCoordinator.swift */; };
+		4994E6E5235E13960098E4EB /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994E6E4235E13950098E4EB /* ActionButton.swift */; };
+		4994E6E7235E13B60098E4EB /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994E6E6235E13B60098E4EB /* Action.swift */; };
+		4994E6E9235E149D0098E4EB /* LoadingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994E6E8235E149D0098E4EB /* LoadingImageView.swift */; };
+		4994E6EC235E32280098E4EB /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994E6EB235E32280098E4EB /* CoreDataStack.swift */; };
+		4994E6EF235E32D50098E4EB /* FacebookData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4994E6ED235E32D50098E4EB /* FacebookData.xcdatamodeld */; };
+		4994E6F2235EB5610098E4EB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994E6F1235EB5610098E4EB /* Constants.swift */; };
+		4994E6F4235EB6430098E4EB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994E6F3235EB6430098E4EB /* BaseViewController.swift */; };
+		4994E6F8235EC9AB0098E4EB /* HUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994E6F7235EC9AB0098E4EB /* HUDView.swift */; };
+		4994E6FA235ECB2B0098E4EB /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994E6F9235ECB2B0098E4EB /* String+Ext.swift */; };
+		EDA7748E28904124A3C454C4 /* Pods_PharosTestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6BA22F4F4B4E03C0AA82D6B /* Pods_PharosTestApp.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0B1042A6E7E02CDEBA14CB29 /* Pods-PharosTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PharosTestApp.debug.xcconfig"; path = "Target Support Files/Pods-PharosTestApp/Pods-PharosTestApp.debug.xcconfig"; sourceTree = "<group>"; };
+		23CA1D6BD5478ABF7BB52B7B /* Pods-PharosTestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PharosTestApp.release.xcconfig"; path = "Target Support Files/Pods-PharosTestApp/Pods-PharosTestApp.release.xcconfig"; sourceTree = "<group>"; };
+		497397F1235EE57600A8FA10 /* FacebookProfileDatastore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookProfileDatastore.swift; sourceTree = "<group>"; };
+		497397F3235EEB8400A8FA10 /* FBProfileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBProfileInfo.swift; sourceTree = "<group>"; };
+		497397F5235EF2C000A8FA10 /* FacebookHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookHelper.swift; sourceTree = "<group>"; };
+		497397F7235EFAE900A8FA10 /* DispatchQueueHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueHelper.swift; sourceTree = "<group>"; };
+		497397FD235F059400A8FA10 /* Profile+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataClass.swift"; sourceTree = "<group>"; };
+		497397FE235F059400A8FA10 /* Profile+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		49944C222359B1BA0011B6A4 /* PharosTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PharosTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49944C252359B1BA0011B6A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		49944C292359B1BA0011B6A4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		49944C2E2359B1BC0011B6A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		49944C312359B1BC0011B6A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		49944C332359B1BC0011B6A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4994E6DB235DA9BC0098E4EB /* UIView+Anchors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Anchors.swift"; sourceTree = "<group>"; };
+		4994E6DD235DC08A0098E4EB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4994E6DF235DC8000098E4EB /* FacebookAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuthManager.swift; sourceTree = "<group>"; };
+		4994E6E1235DF5350098E4EB /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		4994E6E4235E13950098E4EB /* ActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		4994E6E6235E13B60098E4EB /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		4994E6E8235E149D0098E4EB /* LoadingImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingImageView.swift; sourceTree = "<group>"; };
+		4994E6EB235E32280098E4EB /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		4994E6EE235E32D50098E4EB /* FacebookData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FacebookData.xcdatamodel; sourceTree = "<group>"; };
+		4994E6F1235EB5610098E4EB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4994E6F3235EB6430098E4EB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		4994E6F7235EC9AB0098E4EB /* HUDView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUDView.swift; sourceTree = "<group>"; };
+		4994E6F9235ECB2B0098E4EB /* String+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		A6BA22F4F4B4E03C0AA82D6B /* Pods_PharosTestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PharosTestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		49944C1F2359B1BA0011B6A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDA7748E28904124A3C454C4 /* Pods_PharosTestApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3613FC05046F37A7CE697C7E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0B1042A6E7E02CDEBA14CB29 /* Pods-PharosTestApp.debug.xcconfig */,
+				23CA1D6BD5478ABF7BB52B7B /* Pods-PharosTestApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		49944C192359B1BA0011B6A4 = {
+			isa = PBXGroup;
+			children = (
+				49944C242359B1BA0011B6A4 /* PharosTestApp */,
+				49944C232359B1BA0011B6A4 /* Products */,
+				3613FC05046F37A7CE697C7E /* Pods */,
+				AE822397BE72FE7976CAB82D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		49944C232359B1BA0011B6A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49944C222359B1BA0011B6A4 /* PharosTestApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		49944C242359B1BA0011B6A4 /* PharosTestApp */ = {
+			isa = PBXGroup;
+			children = (
+				49944C3A2359BEDC0011B6A4 /* SupportingFiles */,
+				49944C392359B93D0011B6A4 /* Source */,
+			);
+			path = PharosTestApp;
+			sourceTree = "<group>";
+		};
+		49944C392359B93D0011B6A4 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				49944C252359B1BA0011B6A4 /* AppDelegate.swift */,
+				4994E6E1235DF5350098E4EB /* AppCoordinator.swift */,
+				4994E6D5235D92780098E4EB /* Controllers */,
+				4994E6D8235D92E10098E4EB /* Views */,
+				4994E6D7235D92D80098E4EB /* Model */,
+				4994E6D6235D92C70098E4EB /* Services */,
+				4994E6D9235D936F0098E4EB /* Common */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		49944C3A2359BEDC0011B6A4 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				49944C2E2359B1BC0011B6A4 /* Assets.xcassets */,
+				49944C332359B1BC0011B6A4 /* Info.plist */,
+				49944C302359B1BC0011B6A4 /* LaunchScreen.storyboard */,
+				4994E6F1235EB5610098E4EB /* Constants.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		4994E6D5235D92780098E4EB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				49944C292359B1BA0011B6A4 /* LoginViewController.swift */,
+				4994E6DD235DC08A0098E4EB /* ProfileViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4994E6D6235D92C70098E4EB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4994E6DF235DC8000098E4EB /* FacebookAuthManager.swift */,
+				497397F1235EE57600A8FA10 /* FacebookProfileDatastore.swift */,
+				497397F5235EF2C000A8FA10 /* FacebookHelper.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4994E6D7235D92D80098E4EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4994E6ED235E32D50098E4EB /* FacebookData.xcdatamodeld */,
+				497397FD235F059400A8FA10 /* Profile+CoreDataClass.swift */,
+				497397FE235F059400A8FA10 /* Profile+CoreDataProperties.swift */,
+				497397F3235EEB8400A8FA10 /* FBProfileInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4994E6D8235D92E10098E4EB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4994E6D9235D936F0098E4EB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4994E6F0235EB49A0098E4EB /* ViewController */,
+				4994E6EA235E14A30098E4EB /* View */,
+				4994E6E3235E13590098E4EB /* Utility */,
+				4994E6DA235D937F0098E4EB /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4994E6DA235D937F0098E4EB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4994E6F9235ECB2B0098E4EB /* String+Ext.swift */,
+				4994E6DB235DA9BC0098E4EB /* UIView+Anchors.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4994E6E3235E13590098E4EB /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				4994E6E6235E13B60098E4EB /* Action.swift */,
+				4994E6EB235E32280098E4EB /* CoreDataStack.swift */,
+				497397F7235EFAE900A8FA10 /* DispatchQueueHelper.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		4994E6EA235E14A30098E4EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4994E6F7235EC9AB0098E4EB /* HUDView.swift */,
+				4994E6E8235E149D0098E4EB /* LoadingImageView.swift */,
+				4994E6E4235E13950098E4EB /* ActionButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4994E6F0235EB49A0098E4EB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4994E6F3235EB6430098E4EB /* BaseViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		AE822397BE72FE7976CAB82D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A6BA22F4F4B4E03C0AA82D6B /* Pods_PharosTestApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		49944C212359B1BA0011B6A4 /* PharosTestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49944C362359B1BC0011B6A4 /* Build configuration list for PBXNativeTarget "PharosTestApp" */;
+			buildPhases = (
+				016F1D91EC7E74544238442E /* [CP] Check Pods Manifest.lock */,
+				49944C1E2359B1BA0011B6A4 /* Sources */,
+				49944C1F2359B1BA0011B6A4 /* Frameworks */,
+				49944C202359B1BA0011B6A4 /* Resources */,
+				072A43DBCD4D680CAA414CAE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PharosTestApp;
+			productName = PharosTestApp;
+			productReference = 49944C222359B1BA0011B6A4 /* PharosTestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		49944C1A2359B1BA0011B6A4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "Andriy Roshchin";
+				TargetAttributes = {
+					49944C212359B1BA0011B6A4 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = 49944C1D2359B1BA0011B6A4 /* Build configuration list for PBXProject "PharosTestApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 49944C192359B1BA0011B6A4;
+			productRefGroup = 49944C232359B1BA0011B6A4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				49944C212359B1BA0011B6A4 /* PharosTestApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		49944C202359B1BA0011B6A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49944C322359B1BC0011B6A4 /* LaunchScreen.storyboard in Resources */,
+				49944C2F2359B1BC0011B6A4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		016F1D91EC7E74544238442E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PharosTestApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		072A43DBCD4D680CAA414CAE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PharosTestApp/Pods-PharosTestApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PharosTestApp/Pods-PharosTestApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PharosTestApp/Pods-PharosTestApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		49944C1E2359B1BA0011B6A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				497397F8235EFAE900A8FA10 /* DispatchQueueHelper.swift in Sources */,
+				4994E6F4235EB6430098E4EB /* BaseViewController.swift in Sources */,
+				4994E6E2235DF5350098E4EB /* AppCoordinator.swift in Sources */,
+				4994E6EF235E32D50098E4EB /* FacebookData.xcdatamodeld in Sources */,
+				497397F6235EF2C000A8FA10 /* FacebookHelper.swift in Sources */,
+				4994E6F8235EC9AB0098E4EB /* HUDView.swift in Sources */,
+				49944C2A2359B1BA0011B6A4 /* LoginViewController.swift in Sources */,
+				4994E6E9235E149D0098E4EB /* LoadingImageView.swift in Sources */,
+				4994E6DC235DA9BC0098E4EB /* UIView+Anchors.swift in Sources */,
+				497397F4235EEB8400A8FA10 /* FBProfileInfo.swift in Sources */,
+				4994E6DE235DC08A0098E4EB /* ProfileViewController.swift in Sources */,
+				497397FF235F059400A8FA10 /* Profile+CoreDataClass.swift in Sources */,
+				4994E6EC235E32280098E4EB /* CoreDataStack.swift in Sources */,
+				4994E6E0235DC8000098E4EB /* FacebookAuthManager.swift in Sources */,
+				49944C262359B1BA0011B6A4 /* AppDelegate.swift in Sources */,
+				497397F2235EE57600A8FA10 /* FacebookProfileDatastore.swift in Sources */,
+				4994E6E7235E13B60098E4EB /* Action.swift in Sources */,
+				4994E6E5235E13960098E4EB /* ActionButton.swift in Sources */,
+				4994E6FA235ECB2B0098E4EB /* String+Ext.swift in Sources */,
+				49739800235F059400A8FA10 /* Profile+CoreDataProperties.swift in Sources */,
+				4994E6F2235EB5610098E4EB /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		49944C302359B1BC0011B6A4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49944C312359B1BC0011B6A4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		49944C342359B1BC0011B6A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		49944C352359B1BC0011B6A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		49944C372359B1BC0011B6A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B1042A6E7E02CDEBA14CB29 /* Pods-PharosTestApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WFBXDNHV84;
+				INFOPLIST_FILE = "$(SRCROOT)/PharosTestApp/SupportingFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AR.PharosTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		49944C382359B1BC0011B6A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23CA1D6BD5478ABF7BB52B7B /* Pods-PharosTestApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WFBXDNHV84;
+				INFOPLIST_FILE = "$(SRCROOT)/PharosTestApp/SupportingFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AR.PharosTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		49944C1D2359B1BA0011B6A4 /* Build configuration list for PBXProject "PharosTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49944C342359B1BC0011B6A4 /* Debug */,
+				49944C352359B1BC0011B6A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49944C362359B1BC0011B6A4 /* Build configuration list for PBXNativeTarget "PharosTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49944C372359B1BC0011B6A4 /* Debug */,
+				49944C382359B1BC0011B6A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4994E6ED235E32D50098E4EB /* FacebookData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4994E6EE235E32D50098E4EB /* FacebookData.xcdatamodel */,
+			);
+			currentVersion = 4994E6EE235E32D50098E4EB /* FacebookData.xcdatamodel */;
+			path = FacebookData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 49944C1A2359B1BA0011B6A4 /* Project object */;
+}
