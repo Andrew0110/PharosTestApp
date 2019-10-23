@@ -16,17 +16,21 @@ class ProfileViewController: BaseViewController {
             configureView()
         }
     }
+    var reloadAction: (()->Void)?
     
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = Constants.Titles.Profile
         
         setupViews()
     }
-
+    
+    // MARK: - Setup UI
     private func setupViews() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: Constants.ButtonTitles.Logout, style: .plain,  target: self, action: #selector(logoutTapped))
-        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: Constants.ButtonTitles.Logout, style: .plain, target: self, action: #selector(logoutTapped))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(updateTapped))
+
         view.addSubview(profileView)
         profileView.fillSuperview()
     }
@@ -40,5 +44,9 @@ class ProfileViewController: BaseViewController {
     // MARK: - Actions
     @objc func logoutTapped() {
         FacebookAuthManager.instance.logout()
+    }
+    
+    @objc func updateTapped() {
+        reloadAction?()
     }
 }

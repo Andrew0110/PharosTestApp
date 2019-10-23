@@ -28,7 +28,8 @@ class ActionButton: UIButton {
     }
     
     // MARK: - Initialize
-    init(action: Action = Action(title: nil, iconName: nil, action: {}), type: ActionButtonType = .full) {
+    init(action: Action = Action(title: nil, iconName: nil, handler: {}),
+         type: ActionButtonType = .full) {
         self.type = type
         self.action = action
         super.init(frame: .zero)
@@ -49,18 +50,25 @@ class ActionButton: UIButton {
     func configure() {
         update()
         contentHorizontalAlignment = .left
-        addTarget(self, action: #selector(click), for: .touchUpInside)
+        addTarget(self, action: #selector(onClick), for: .touchUpInside)
     }
     
     func update() {
-        setTitle((type == .text || type == .full) ? action?.title ?? "" : "", for: .normal)
-        setImage((type == .icon || type == .full) ? UIImage(named: action?.iconName ?? "")?.withRenderingMode(.alwaysTemplate) : nil, for: .normal)
+        setTitle(
+            (type == .text || type == .full) ? action?.title ?? "" : "",
+            for: .normal
+        )
+        setImage(
+            (type == .icon || type == .full)
+                ? UIImage(named: action?.iconName ?? "")?.withRenderingMode(.alwaysTemplate)
+                : nil,
+            for: .normal)
         setImage((type == .icon || type == .full) ? UIImage(named: action?.iconName ?? "")?.withRenderingMode(.alwaysTemplate) : nil, for: .highlighted)
     }
     
     // MARK: - Actions
-    @objc func click() {
-        action?.action()
+    @objc private func onClick() {
+        action?.handler()
     }
     
     func setupUI(bordered: Bool = false, textColor: UIColor = .blue, secondaryColor: UIColor = .clear) {

@@ -60,6 +60,9 @@ private extension AppCoordinator {
         navigationController.isNavigationBarHidden = false
         let vc = ProfileViewController()
         navigationController.setViewControllers([vc], animated: true)
-        faceBookHelper.fetchProfile { vc.profile = $0 }
+        vc.reloadAction = { 
+            self.faceBookHelper.updateProfile { [weak vc] in vc?.profile = $0 }
+        }
+        faceBookHelper.fetchProfile { [weak vc] in vc?.profile = $0 }
     }
 }

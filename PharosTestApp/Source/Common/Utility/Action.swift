@@ -10,5 +10,5 @@ import Foundation
 struct Action {
     let title: String?
     let iconName: String?
-    let action: () -> Void
+    let handler: () -> Void
 }

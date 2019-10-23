@@ -9,7 +9,7 @@ import UIKit
 
 private let horizontalSpacing: CGFloat = 20
 private let verticalSpacing: CGFloat = 10
-private let font = UIFont.systemFont(ofSize: 16)
+private let font = UIFont.boldSystemFont(ofSize: 16)
 
 class HUDView: UIView {
 
@@ -34,7 +34,12 @@ class HUDView: UIView {
     }
     
     func addLabel(withText text: String) {
-        let label = UILabel(frame: CGRect(x: horizontalSpacing, y: verticalSpacing, width: frame.width-2*horizontalSpacing, height: frame.height-2*verticalSpacing))
+        let label = UILabel(frame: CGRect(
+            x: horizontalSpacing,
+            y: verticalSpacing,
+            width: frame.width-2*horizontalSpacing,
+            height: frame.height-2*verticalSpacing
+        ))
         label.text = text
         label.textAlignment = .center
         label.numberOfLines = 0
@@ -45,18 +50,36 @@ class HUDView: UIView {
         self.addSubview(label)
     }
 
-    class func prefferedFrame(for text:String, in view: UIView, inset: HudInset) -> CGRect {
-        let width = min(text.width(withConstrainedHeight: .greatestFiniteMagnitude, font: font), view.bounds.width - 4*horizontalSpacing)
+    class func prefferedFrame(for text:String,
+                              in view: UIView,
+                              inset: HudInset) -> CGRect {
+        let width = min(
+            text.width(withConstrainedHeight: .greatestFiniteMagnitude, font: font),
+            view.bounds.width - 4*horizontalSpacing
+        )
         let height = text.height(withConstrainedWidth: width, font: font)
         switch inset {
         case .bottom(let inset):
-            return CGRect(x: (view.bounds.width - width - 2*horizontalSpacing)/2, y: view.bounds.height - inset - height, width: width + 2*horizontalSpacing, height: height + 2*verticalSpacing)
+            return CGRect(
+                x: (view.bounds.width - width - 2*horizontalSpacing)/2,
+                y: view.bounds.height - inset - height,
+                width: width + 2*horizontalSpacing,
+                height: height + 2*verticalSpacing
+            )
         case .top(let inset):
-            return CGRect(x: (view.bounds.width - width - 2*horizontalSpacing)/2, y: inset, width: width + 2*horizontalSpacing, height: height + 2*verticalSpacing)
+            return CGRect(
+                x: (view.bounds.width - width - 2*horizontalSpacing)/2,
+                y: inset,
+                width: width + 2*horizontalSpacing,
+                height: height + 2*verticalSpacing
+            )
         }
     }
     
-    class func show(_ text: String, in view: UIView?, for seconds: CGFloat, inset: HudInset = .bottom(inset: 100)) {
+    class func show(_ text: String,
+                    in view: UIView?,
+                    for seconds: CGFloat,
+                    inset: HudInset = .bottom(inset: 100)) {
         guard let view = view else { return }
         let hud = HUDView(frame: HUDView.prefferedFrame(for: text, in: view, inset: inset))
         hud.addLabel(withText: text)
@@ -67,7 +90,10 @@ class HUDView: UIView {
             hud.alpha = 1
         }) { (finished) in
             if finished {
-                UIView.animate(withDuration: 0.2, delay: TimeInterval(seconds), options: .curveEaseInOut, animations: {
+                UIView.animate(withDuration: 0.2,
+                               delay: TimeInterval(seconds),
+                               options: .curveEaseInOut,
+                               animations: {
                     hud.alpha = 0
                 }, completion: { (finished) in
                     hud.removeFromSuperview()

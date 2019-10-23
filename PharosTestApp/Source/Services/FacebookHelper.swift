@@ -9,16 +9,21 @@
 import Foundation
 
 class FacebookHelper {
-    let datastore = FacebookProfileDatastore()
+    
+    private let datastore = FacebookProfileDatastore()
     
     func fetchProfile(completion: @escaping (Profile)->Void) {
         if let profile = datastore.fetchProfile() {
             completion(profile)
         } else {
-            FacebookAuthManager.instance.getProfileData { [weak self] (profileInfo) in
-                onMainQueue {
-                    self?.datastore.appendProfile(profileInfo: profileInfo, completion: completion)
-                }
+            updateProfile(completion: completion)
+        }
+    }
+    
+    func updateProfile(completion: @escaping (Profile)->Void) {
+        FacebookAuthManager.instance.getProfileData { [weak self] (profileInfo) in
+            onMainQueue {
+                self?.datastore.appendProfile(profileInfo: profileInfo, completion: completion)
             }
         }
     }

@@ -13,6 +13,7 @@ class LoginViewController: BaseViewController {
     var onLogInSuccess: (()->Void)?
     private let loginView = SingleButtonView()
     
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = Constants.Titles.Login
@@ -20,17 +21,19 @@ class LoginViewController: BaseViewController {
         setupViews()
     }
 
+    // MARK: - Setup UI
     private func setupViews() {
         view.backgroundColor = .white
         view.addSubview(loginView)
         loginView.fillSuperview()
         
-        loginView.action = Action(title: Constants.ButtonTitles.FBLogin, iconName: nil, action: { [weak self] in
-            self?.loginFacebookAction()
+        loginView.action = Action(title: Constants.ButtonTitles.FBLogin, iconName: nil, handler: { [weak self] in
+            self?.loginFacebook()
         })
     }
     
-    @objc private func loginFacebookAction() {
+    // MARK: - Actions
+    @objc private func loginFacebook() {
         FacebookAuthManager.instance.login(in: self, onSuccess: { [weak self] in
             self?.onLogInSuccess?()
         }) { [weak self] errorMessage in
@@ -38,4 +41,3 @@ class LoginViewController: BaseViewController {
         }
     }
 }
-
