@@ -8,6 +8,21 @@
 
 import Foundation
 
+struct FieldsHelper {
+    enum FieldType: String {
+        case id = "id"
+        case name = "name"
+        case firstName = "first_name"
+        case lastName = "last_name"
+        case picture = "picture.type(large)"
+        case email = "email"
+    }
+    
+    static func getParameters(for fields: [FieldType]) -> [String:Any] {
+        return ["fields": fields.map { $0.rawValue }.joined(separator: ", ")]
+    }
+}
+
 struct FBProfileInfo {
     let first_name: String?
     let last_name: String?

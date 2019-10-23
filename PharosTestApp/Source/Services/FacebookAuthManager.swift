@@ -40,7 +40,7 @@ class FacebookAuthManager {
     
     func getProfileData(completion: @escaping (FBProfileInfo)->Void){
         if((AccessToken.current) != nil) {
-            let params = ["fields": "id, name, first_name, last_name, picture.type(large), email"]
+            let params = FieldsHelper.getParameters(for: [.id, .picture, . email, .name])
             GraphRequest(graphPath: "me", parameters: params).start(completionHandler: { (connection, result, error) -> Void in
                 if (error == nil), let result = result as? [String:Any] {
                     completion(FBProfileInfo(dict: result))
